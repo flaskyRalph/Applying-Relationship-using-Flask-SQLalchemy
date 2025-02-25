@@ -11,7 +11,7 @@ bootstrap = Bootstrap5(app)
 app.config['SECRET_KEY'] = "Do_not_expose"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:123@localhost/flask_db'  # PostgreSQL
 app.config['SQLALCHEMY_BINDS'] = {'logs': 'sqlite:///logs.db'}  # SQLite for logging
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 
 class Base(DeclarativeBase):
